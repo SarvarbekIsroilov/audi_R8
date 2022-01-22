@@ -1,0 +1,294 @@
+* {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+}
+
+:root {
+  --body-color:#00050BFF;
+  --text-color:#FFFFFFFF;
+  --box-color:#BF404CFF;
+}
+
+body {
+  background-color: var(--body-color);
+  font-family: "Josefin Sans", sans-serif;
+  color: var(--text-color);
+}
+
+h1 {
+  font-family: var(--h1-font);
+}
+
+img {
+  width: 100%;
+}
+
+header nav {
+  padding: 0 50px 0 30px;
+}
+header nav .navbar-brand img {
+  width: 100px;
+}
+header nav ul li {
+  padding: 0 25px !important;
+}
+header nav ul li a {
+  color: var(--text-color) !important;
+}
+header nav ul li a:hover {
+  color: #36d6bc !important;
+}
+
+main .header_img {
+  width: 100%;
+  height: 100vh;
+}
+main .header_img .rel {
+  position: relative;
+}
+main .header_img .rel .abs {
+  position: absolute;
+  right: 0px;
+  top: 140px;
+}
+main .header_img .rel .abs .r8 {
+  font-size: 80px;
+  padding-bottom: 40px;
+}
+main .features {
+  padding: 50px 0;
+}
+main .features .text {
+  padding: 20px 0;
+  padding-bottom: 50px;
+  position: relative;
+}
+main .features .text::before {
+  content: " ";
+  position: absolute;
+  top: 0px;
+  left: -20px;
+  width: 8px;
+  height: 120px;
+  background-color: var(--box-color);
+}
+main .features .card {
+  box-shadow: 2px 2px 4px var(--box-color);
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+  height: 250px;
+  border: solid 1px var(--box-color);
+  background-color: var(--body-color) !important;
+  padding: 30px 20px;
+}
+main .features .card img {
+  position: relative;
+  z-index: 3;
+  width: 100px;
+}
+main .features .card .icon_text {
+  color: var(--box-color);
+  font-size: 70px;
+  position: relative;
+  z-index: 3;
+  transition: 0.7s;
+}
+main .features .card .card-text {
+  position: relative;
+  z-index: 3;
+  padding-left: 15px;
+}
+
+.card::before {
+  content: " ";
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  z-index: 1;
+  width: 8px;
+  height: 12px;
+  transition: 0.8s all ease-in-out;
+  border-top-left-radius: 60%;
+  background-color: var(--box-color);
+}
+
+.card:hover .icon_text {
+  color: var(--text-color) !important;
+}
+
+.card:hover::before {
+  width: 150%;
+  height: 100vh;
+}
+
+.link {
+  color: var(--box-color) !important;
+  font-size: 18px;
+  text-transform: "loe";
+}
+
+.grid_img img {
+  width: 100%;
+}
+.grid_img .grid div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.grid_img .grid div h2, .grid_img .grid div a, .grid_img .grid div p {
+  padding: 16px;
+}
+.grid_img .grid div:nth-child(3) {
+  background-color: var(--box-color);
+}
+
+.fluid {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.col-6.img-fluid,
+.grid .col-6 {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.led {
+  height: 650px;
+  width: 100%;
+  margin: 30px 0;
+}
+.led img {
+  width: 60px;
+}
+.led .col-4 {
+  padding: 30px 20px 0 20px;
+}
+.led .col-4 p {
+  font-size: 18px;
+}
+
+.red_car {
+  height: 100vh;
+}
+
+.dew {
+  margin-top: 60px;
+  background-color: var(--body-color);
+  display: flex;
+  opacity: 0.7;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  transition: 0.7s ease-in-out;
+}
+
+.dew:hover {
+  opacity: 0.9;
+}
+
+.footer_img {
+  height: 500px;
+}
+.footer_img a {
+  color: var(--box-color) !important;
+  font-size: 18px !important;
+}
+
+.btn {
+  border: solid 1px blue;
+}
+
+.soya {
+  position: fixed;
+  top: 0%;
+  right: -100%;
+  transition: 0.5s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.741);
+}
+
+.soya.left {
+  right: 0%;
+}
+
+.menu {
+  display: none;
+}
+.menu button {
+  background-color: transparent;
+  outline: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  border: none;
+  z-index: 10;
+}
+.menu button i {
+  font-size: 25px;
+  color: var(--text-color);
+}
+.menu button .btn {
+  border: none;
+  outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: block;
+  }
+
+  h1 {
+    font-size: 60px !important;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column !important;
+    position: fixed;
+    padding-top: 50px;
+    top: 0%;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    z-index: 5;
+    transition: 0.5s ease-in-out;
+    border-left: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.841);
+  }
+  nav ul li {
+    padding: 35px !important;
+  }
+
+  nav ul.block {
+    right: 0% !important;
+  }
+
+  .led {
+    height: 900px !important;
+  }
+
+  .container {
+    padding: 0px 50px;
+  }
+
+  .dew {
+    width: 80%;
+    margin: 20px auto;
+  }
+}
+.sped .tezlik div {
+  padding: 60px;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.sped .tezlik div h1 {
+  font-weight: 600;
+  margin: 0 auto;
+}/*# sourceMappingURL=style.css.map */
