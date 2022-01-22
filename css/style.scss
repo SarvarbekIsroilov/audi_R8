@@ -272,10 +272,15 @@ main{
             }
         }
     }
+
     nav{
         ul.block{
             right: 0% !important;
         }
+    }
+    main .features .card img {
+        width: 67px;
+        height: 77px;
     }
     .led{
         height: 900px !important;
